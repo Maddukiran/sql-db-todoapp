@@ -35,17 +35,17 @@ select * from users;
 create table profiles
 ( 
 id int primary key auto_increment,
-user_name varchar(50) unique,
-email varchar(50) unique,
-fullname varchar(50),
-company varchar(50)
+user_id int not null,
+company varchar(50),
+forigen key (user_id) references users(id)
 );
 ```
 
 ## Load Sample Data
 ```sql
-insert into profiles (user_name, email, fullname, company) values ('test', 'test@mail.com', 'test', 'testing');
-insert into profiles (user_name, email, fullname, company) values ('kiran', 'kiran@mail.com', 'kiranM', 'sify');
+insert into profiles (user_id, company) values (1, 'sify');
+insert into profiles (user_id, company) values (2, 'moonshot');
+insert into profiles (user_id, company) values (3, 'testing');
 ```
 
 ## List All Profiles
@@ -58,28 +58,29 @@ select * from profiles;
 create table tasks
 (
 id int primary key auto_increment,
-created_bt varchar(50),
-disc text(500),
+created_by int not null,
+desc text(500),
 priority varchar(50),
-status varchar(50)
+status varchar(50),
+forigen key (created_by) references users(id)
 );
 ```
 
 ## Loading Sample Data
 ```sql
-insert into tasks (disc, created_by, priority, status) values ('create account heroku', 'kiran', 'high', 'ongoing');
-insert into tasks (disc, created_by, priority, status) values ('create app in heroku', 'kiran', 'medium', 'upcoming');
-insert into tasks (disc, created_by, priority, status) values ('create api', 'kiran', 'medium', 'upcoming');
+insert into tasks (desc, created_by, priority, status) values ('create account heroku', 3, 'high', 'ongoing');
+insert into tasks (disc, created_by, priority, status) values ('create app in heroku', 3, 'medium', 'upcoming');
+insert into tasks (disc, created_by, priority, status) values ('create api', 'kiran', 3, 'upcoming');
 ```
 
 ## Filtering with status
 ```sql
-select * from tasks where created_by = "kiran" and status = "ongoing";
-select * from tasks where created_by = "kiran" and status = "upcoming";
-select * from tasks where created_by = "kiran" and status = "completed";
+select * from tasks where created_by = 3 and status = "ongoing";
+select * from tasks where created_by = 3 and status = "upcoming";
+select * from tasks where created_by = 3 and status = "completed";
 ```
 
 ## Sorting with priority
 ```sql
-select * from tasks where created_by = "kiran" order by priority;
+select * from tasks where created_by = 3 order by priority;
 ```
