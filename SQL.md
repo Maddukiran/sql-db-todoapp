@@ -75,9 +75,11 @@ insert into tasks (disc, created_by, priority, status) values ('create api', 'ki
 ## Filtering with status
 ```sql
 select * from tasks where created_by = "kiran" and status = "ongoing";
+select * from tasks where created_by = "kiran" and status = "upcoming";
+select * from tasks where created_by = "kiran" and status = "completed";
 ```
 
 ## Sorting with priority
 ```sql
-select * from tasks where created_by = "kiran" order by priority
+select * from tasks where created_by = "kiran" order by priority;
 ```
