@@ -1,0 +1,1 @@
+select * from tasks where created_by = 3 order by priority;
