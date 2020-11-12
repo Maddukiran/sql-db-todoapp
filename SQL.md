@@ -69,7 +69,7 @@ status varchar(50)
 ```sql
 insert into tasks (disc, created_by, priority, status) values ('create account heroku', 'kiran', 'high', 'ongoing');
 insert into tasks (disc, created_by, priority, status) values ('create app in heroku', 'kiran', 'medium', 'upcoming');
-insert into tasks (disc, created_by, priority, status) values ('create api, 'kiran', 'medium', 'upcoming');
+insert into tasks (disc, created_by, priority, status) values ('create api', 'kiran', 'medium', 'upcoming');
 ```
 
 ## Filtering with status
