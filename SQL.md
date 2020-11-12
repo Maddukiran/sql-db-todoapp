@@ -30,7 +30,7 @@ insert into users (name,email,password) values ( 'test','test@mail.com', 'test')
 select * from users;
 ```
 
-## Create Acccounts 
+## Create Profiles 
 ```sql
 create table profiles
 ( 
@@ -44,8 +44,8 @@ company varchar(50)
 
 ## Load Sample Data
 ```sql
-insert into accounts (user_name, email, fullname, company) values ('test', 'test@mail.com', 'test', 'testing');
-insert into accounts (user_name, email, fullname, company) values ('kiran', 'kiran@mail.com', 'kiranM', 'sify');
+insert into profiles (user_name, email, fullname, company) values ('test', 'test@mail.com', 'test', 'testing');
+insert into profiles (user_name, email, fullname, company) values ('kiran', 'kiran@mail.com', 'kiranM', 'sify');
 ```
 
 ## List All Profiles
@@ -58,8 +58,8 @@ select * from profiles;
 create table tasks
 (
 id int primary key auto_increment,
-created_bt varchar(50) unique,
-disc text(500) unique,
+created_bt varchar(50),
+disc text(500),
 priority varchar(50),
 status varchar(50)
 );
