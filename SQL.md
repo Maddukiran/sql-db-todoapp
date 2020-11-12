@@ -62,7 +62,7 @@ created_by int not null,
 desc text(500),
 priority varchar(50),
 status varchar(50),
-forigen key (created_by) references users(id)
+foreign key (created_by) references users(id)
 );
 ```
 
@@ -70,7 +70,7 @@ forigen key (created_by) references users(id)
 ```sql
 insert into tasks (desc, created_by, priority, status) values ('create account heroku', 3, 'high', 'ongoing');
 insert into tasks (disc, created_by, priority, status) values ('create app in heroku', 3, 'medium', 'upcoming');
-insert into tasks (disc, created_by, priority, status) values ('create api', 'kiran', 3, 'upcoming');
+insert into tasks (disc, created_by, priority, status) values ('create api', 3, 'medium', 'upcoming');
 ```
 
 ## Filtering with status
