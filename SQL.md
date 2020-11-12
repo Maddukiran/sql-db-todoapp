@@ -79,5 +79,5 @@ select * from tasks where created_by = "kiran" and status = "ongoing";
 
 ## Sorting with priority
 ```sql
-select * from tasks where created_by = "kiran" group by priority
+select * from tasks where created_by = "kiran" order by priority
 ```
