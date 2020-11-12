@@ -4,8 +4,8 @@
 ## Create Database
 
 ```sql
-create database kiran_db;
-use kiran_db;
+create database todoapp_db;
+use todoapp_db;
 ```
 
 ## Create Users table
