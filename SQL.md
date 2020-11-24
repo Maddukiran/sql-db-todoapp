@@ -30,10 +30,10 @@ insert into users (name,email,password) values ( 'test','test@mail.com', 'test')
 select * from users;
 ```
 
-## Create Profiles 
+## Create Profiles
 ```sql
 create table profiles
-( 
+(
 id int primary key auto_increment,
 user_id int not null,
 company varchar(50),
