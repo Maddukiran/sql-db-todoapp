@@ -68,9 +68,14 @@ foreign key (created_by) references users(id)
 
 ## Loading Sample Data
 ```sql
-insert into tasks (desc, created_by, priority, status) values ('create account heroku', 3, 'high', 'ongoing');
-insert into tasks (disc, created_by, priority, status) values ('create app in heroku', 3, 'medium', 'upcoming');
-insert into tasks (disc, created_by, priority, status) values ('create api', 3, 'medium', 'upcoming');
+insert into tasks (description, created_by, priority, status) values ('create account heroku', 3, 'high', 'ongoing');
+insert into tasks (description, created_by, priority, status) values ('create app in heroku', 3, 'medium', 'upcoming');
+insert into tasks (description, created_by, priority, status) values ('create api', 3, 'medium', 'upcoming');
+```
+
+## Delete Task
+```sql
+delete from tasks where id = 1;
 ```
 
 ## Filtering with status
